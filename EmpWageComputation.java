@@ -1,37 +1,41 @@
 public class EmpWageComputation{
 
-	public static void main(String[] args){
+	public static void main(String[] args) {
 
-		int isFullTime = 1;
-		int isPartTime = 2;
-		int wagePerHr = 20;
+		
 		int fullDayHr = 8;
 		int partTimeHr = 4;
-		int dailyEmpWage =0;
+		int wagePerHr = 20;
+		int day = 0;
+		int empHr = 0;
+		int wage = 0;
 
-		double empCheck = Math.floor(Math.random() * 10) % 3;
+		while (day <= 19) {
 
-		if(empCheck == isFullTime)
-		{
-			System.out.println("Employee is Present");
-			dailyEmpWage = wagePerHr * fullDayHr;
-			System.out.println("DailyEmpWage of FullTime Employee::" + dailyEmpWage);
+			int caseCheck = (int) (Math.random() * 10) % 3;
 
+		switch (caseCheck) {
 
+		case 1:
+			System.out.println("Present fullday");
+			wage = (wage + (wagePerHr * fullDayHr));
+			day++;
+			break;
+
+		case 2:
+			System.out.println("Present PartTime");
+			wage = (wage + (wagePerHr * partTimeHr));
+			day++;
+			break;
+
+		default:
+			System.out.println("Absent");
+		    day++;
 		}
-		else if(empCheck == isPartTime)
-		{
-			System.out.println("Employee is Present");
-			dailyEmpWage = wagePerHr * partTimeHr;
-			System.out.println("Daily Wage of PartTime Employee::" + dailyEmpWage);
-		}else
-		{
-			System.out.println("Employee is Absent");
+   		 }
 
-		}
-
-
+		System.out.println("total wage of a month is");
+		System.out.println(wage);
 
 	}
-
 }
