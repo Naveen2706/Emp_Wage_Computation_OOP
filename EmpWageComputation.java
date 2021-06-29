@@ -4,9 +4,9 @@ public class EmpWageComputation{
 
 		int isFullTime = 1;
 		int isPartTime = 2;
-		int wagePerHr = 20;
-		int fullDayHr = 8;
-		int partTimeHr = 4;
+		static final int FULLDAYHR = 8;
+		static final int PARTTIMEHR = 4;
+		static final int WAGEPERHR = 20;
 		int dailyEmpWage =0;
 
 		double empCheck = Math.floor(Math.random() * 10) % 3;
@@ -14,7 +14,7 @@ public class EmpWageComputation{
 		if(empCheck == isFullTime)
 		{
 			System.out.println("Employee is Present");
-			dailyEmpWage = wagePerHr * fullDayHr;
+			dailyEmpWage = WAGEPERHR * FULLDAYHR;
 			System.out.println("DailyEmpWage of FullTime Employee::" + dailyEmpWage);
 
 
@@ -22,7 +22,7 @@ public class EmpWageComputation{
 		else if(empCheck == isPartTime)
 		{
 			System.out.println("Employee is Present");
-			dailyEmpWage = wagePerHr * partTimeHr;
+			dailyEmpWage = WAGEPERHR * PARTTIMEHR;
 			System.out.println("Daily Wage of PartTime Employee::" + dailyEmpWage);
 		}else
 		{
