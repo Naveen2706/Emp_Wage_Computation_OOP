@@ -3,20 +3,20 @@ public class EmpWageComputation{
 	public static void main(String[] args) {
 		
 		 int caseCheck = (int)(Math.random() * 10) % 3;
-		 int fullDayHr = 8;
-		 int partTimeHr = 4;
-		 int wagePerHr = 20;
+		static final int FULLDAYHR = 8;
+		static final int PARTTIMEHR = 4;
+		static final int WAGEPERHR = 20;
 
 		switch(caseCheck) {
 
 		case 1:
 			System.out.println("present FullDay ");
-			System.out.println(wagePerHr * fullDayHr);
+			System.out.println(WAGEPERHR * FULLDAYHR);
 			break;
 
 		case 2:
 			System.out.println("present PartTime");
-			System.out.println(wagePerHr * partTimeHr);
+			System.out.println(WAGEPERHR * PARTTIMEHR);
 			break;
 
 		default:
