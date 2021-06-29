@@ -3,11 +3,11 @@ public class EmpWageComputation{
 	public static void main(String[] args) {
 
 
-		int fullDayHr=8;
-		int partTimeHr=4;
-		int wagePerHr=20;
-		int day=0;
-		int empHr=0;
+		static final int FULLDAYHR = 8;
+		static final int PARTTIMEHR = 4;
+		static final int WAGEPERHR = 20;
+		int day = 0;
+		int empHr = 0;
 		int wage = 0;
 
 		while (day <= 19) {
@@ -18,15 +18,15 @@ public class EmpWageComputation{
 
 		case 1:
 				System.out.println("Present fullday");
-				wage = (wage + (wagePerHr * fullDayHr));
-            empHr = (empHr + fullDayHr);
+				wage = (wage + (WAGEPERHR * FULLDAYHR));
+            empHr = (empHr + FULLDAYHR);
 			 day++;
 			break;
 
 		case 2:
 				System.out.println("Present PartTime");
-			   wage = (wage + (wagePerHr * partTimeHr));
-			   empHr = (empHr + partTimeHr);
+			   wage = (wage + (WAGEPERHR * PARTTIMEHR));
+			   empHr = (empHr + PARTTIMEHR);
 			 day++;
 			break;
 
@@ -39,7 +39,7 @@ public class EmpWageComputation{
 		}
 			 }
 	
-		System.out.println("Total wage of a month is");
+		System.out.println("Total wage of a month is :: ");
 		System.out.println(wage);
 		System.out.println(empHr);
 		System.out.println(day);
