@@ -3,9 +3,10 @@ public class EmpWageComputation{
 	public static void main(String[] args) {
 
 		
-		int fullDayHr = 8;
-		int partTimeHr = 4;
-		int wagePerHr = 20;
+		static final int FULLDAYHR = 8;
+		static final int PARTTIMEHR = 4;
+		static final int WAGEPERHR = 20;
+
 		int day = 0;
 		int empHr = 0;
 		int wage = 0;
@@ -18,13 +19,13 @@ public class EmpWageComputation{
 
 		case 1:
 			System.out.println("Present fullday");
-			wage = (wage + (wagePerHr * fullDayHr));
+			wage = (wage + (wWAGEPERHR * FULLDAYHR));
 			day++;
 			break;
 
 		case 2:
 			System.out.println("Present PartTime");
-			wage = (wage + (wagePerHr * partTimeHr));
+			wage = (wage + (WAGEPERHR * PARTTIMEHR));
 			day++;
 			break;
 
